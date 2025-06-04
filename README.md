@@ -64,7 +64,7 @@
 ## ⚙️ 설정 및 실행 방법
 
 1. **환경 설정**:
-    - 필요한 라이브러리(PyTorch, Transformers, PEFT, PyTorch Lightning, Albumentations, scikit-learn, OpenCV 등)가 설치된 Python 환경을 구성합니다. 개발 중 사용된 환경 이름은 `llava_final_env`로 보입니다.
+    - 필요한 라이브러리(PyTorch, Transformers, PEFT, PyTorch Lightning, Albumentations, scikit-learn, OpenCV 등)가 설치된 Python 환경을 구성합니다.
     - 필요한 경우 `TOKENIZERS_PARALLELISM=false` 환경 변수를 설정합니다.
 2. **데이터 준비**:
     - 원본 이미지 데이터를 `CLASS_MAPPING`에 따라 `raw_data/` 내의 하위 폴더(예: `raw_data/0_irrelevant/`, `raw_data/1_chat_history/` 등)에 배치합니다.
@@ -81,6 +81,6 @@
 
 ## 📝 참고 사항
 
-- 스크립트들은 특정 경로 및 모델 ID로 구성되어 있습니다. 사용자의 환경에 맞게 적절히 수정하십시오.
+- 스크립트들은 저의 경로 및 모델 ID로 구성되어 있습니다. 사용자의 환경에 맞게 적절히 수정하십시오.
 - `train_script.py`의 LoRA 하이퍼파라미터 `r` (16) 및 `lora_alpha` (32)는 논문의 세부 방법론에 언급된 값(각각 8, 16)과 다릅니다.
 - matplotlib으로 생성된 혼동 행렬에서 한글 레이블을 올바르게 표시하려면 시스템에 적절한 한글 폰트가 설치되어 있어야 합니다 (`eval.py` 및 `vanilla.py`의 `set_korean_font` 함수 참조).
